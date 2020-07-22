@@ -8,8 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 		<StackPanel>
-			<ListBox x:Name="QuestionSetList" VerticalAlignment="Top"  Height="118" SelectionChanged="QuestionSetList_SelectionChanged" />
-			<ListBox x:Name="QuestionList" VerticalAlignment="Top"  Height="118" SelectionChanged="QuestionList_SelectionChanged" />
+			<ListBox x:Name="QuestionSetList" VerticalAlignment="Top"  Height="118" SelectionChanged="QuestionSetList_SelectionChanged"
+					 DisplayMemberPath="Value" />
+			<ListBox x:Name="QuestionList" VerticalAlignment="Top"  Height="118" SelectionChanged="QuestionList_SelectionChanged"
+					 DisplayMemberPath="Value"/>
 			<ComboBox Name="AnswerList" VerticalAlignment="Top" 
 					  
 					  SelectedValuePath="Id"

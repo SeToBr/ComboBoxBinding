@@ -30,17 +30,17 @@ namespace WpfApp3
 
 			QuestionSetList.ItemsSource = QuestionSetData;
 
-			QuestionSetList.DisplayMemberPath = "Value";
-			QuestionSetList.SelectedValuePath = "Id";
+			//QuestionSetList.DisplayMemberPath = "Value";
+			//QuestionSetList.SelectedValuePath = "Id";
 
 		}
 
 		private void QuestionSetList_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			QuestionList.ItemsSource = QuestionSetData[QuestionSetList.SelectedIndex].QuestionData;
-
-			QuestionList.DisplayMemberPath = "Value";
-			QuestionList.SelectedValuePath = "Id";
+			AnswerList.DataContext = null;
+			//QuestionList.DisplayMemberPath = "Value";
+			//QuestionList.SelectedValuePath = "Id";
 		}
 
 		private void QuestionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -54,6 +54,8 @@ namespace WpfApp3
 				//AnswerList.SelectedValuePath = "Id";
 			}
 		}
+
+
 	}
 
 	public class QuestionSet
